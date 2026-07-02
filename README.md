@@ -30,21 +30,6 @@ Flask portfolio site, ready for GitHub + Render.
 pip install -r requirements.txt
 python app.py
 ```
-Visit http://127.0.0.1:5000
+Visit https://portfolio-5lda.onrender.com/
 
-## Deploy on Render
-1. Push this folder to a GitHub repo.
-2. On Render: **New → Web Service** → connect the repo.
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `gunicorn app:app`
-5. Deploy.
 
-## Notes
-- `index.html` now links to the external files instead of inlining CSS/JS:
-  `{{ url_for('static', filename='css/style.css') }}` and
-  `{{ url_for('static', filename='js/script.js') }}`.
-- Any images referenced in `index.html` (e.g. `images/sql.png`) must be placed in
-  `static/images/` for `url_for('static', filename='images/...')` to resolve.
-- `about.html`, `projects.html`, `experience.html`, `contact.html`, and `blog.html`
-  were not uploaded, so `app.py`'s routes for them will 500 until you add those
-  template files to `templates/`.
